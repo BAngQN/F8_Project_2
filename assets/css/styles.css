@@ -1,5 +1,12 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #fffcf4;
+    --primary_color: #ffb900;
+    --font-heading: Sen, sans-serif;
+    --course_background_color: #fff9e8;
 }
 
 html {
@@ -34,13 +41,21 @@ body {
     font-weight: 600;
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
 a {
     text-decoration: none;
 }
 
+.row {
+    display: flex;
+}
+
 /* Header */
 .header {
-    background: #fffcf4;
+    background: var(--background-color);
 }
 
 .header.fixed {
@@ -51,7 +66,6 @@ a {
 }
 
 .navbar {
-    height: 50px;
     display: flex;
     align-items: center;
     padding: 36px 0px 10px;
@@ -89,5 +103,172 @@ a {
 
 .navbar .btn_signup {
     margin-left: 70px;
-    min-width: 114px;
+    min-width: 144px;
+}
+
+/* Hero */
+.hero {
+    background: var(--background-color);
+    padding: 54px 0 65px;
+}
+
+.hero .body {
+    display: flex;
+}
+
+.hero .hero_media {
+    position: relative;
+    width: 48%;
+}
+
+.hero_media .img {
+    width: 470px;
+    height: 685px;
+    object-position: -448.75px 0px;
+    background-color: lightgray;
+    border-radius: 20px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.hero_media .hero_summary {
+    position: absolute;
+    height: 244px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    bottom: 43px;
+    right: 0px;
+}
+
+.hero_summary .course_info {
+    display: flex;
+    align-items: center;
+    padding-right: 34px;
+}
+
+.hero_summary .course_info + .course_info {
+    margin-top: 14px;
+}
+
+.course_info .icon {
+    background-color: var(--course_background_color);
+    border-radius: 50%;
+    display: flex;
+    padding: 12px;
+}
+
+.course_info .info {
+    margin-left: 16px;
+}
+
+.course_info .label {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem; /* 185.714% */
+}
+
+.course_info .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+}
+
+.hero .hero_content {
+    width: 52%;
+    padding-left: 130px;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.hero_content .heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 6.8rem; /* 117.241% */
+    letter-spacing: -0.116rem;
+}
+
+.hero_content .desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem; /* 166.667% */
+}
+
+.hero_content .cta-group {
+    display: flex;
+    margin-top: 38px;
+}
+
+.hero_content .btn_see_course {
+    background: var(--primary_color);
+    width: 180px;
+    line-height: 64px;
+    color: #fff;
+}
+
+.hero_content .btn_watch_video {
+    background-color: transparent;
+    min-width: 180px;
+    margin-left: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.hero .btn_watch_video .icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.hero .btn_watch_video span {
+    color: #171100;
+    margin-left: 14px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+}
+
+.hero .hero_content .stats {
+    margin-top: 48px;
+}
+
+.hero .stats .title {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.hero .stats .info {
+    margin-top: 8px;
+}
+
+.hero .stats .value {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    padding: 0px 8px 0px 28px;
+}
+
+.hero .stats .stats_item:first-child .value {
+    padding-left: 0px;
+}
+
+.hero .stats .label {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
 }
