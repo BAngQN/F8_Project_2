@@ -361,6 +361,7 @@ a {
     border-radius: 50%;
     background: transparent;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     color: var(--primary_color);
@@ -372,7 +373,11 @@ a {
 }
 
 .courses .item {
+    border: 1px solid #e2dfda;
     border-radius: 12px;
+}
+
+.courses .item:hover {
     box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -577,6 +582,9 @@ a {
 
 .blogs .item {
     border-radius: 16px;
+}
+
+.blogs .item:hover {
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
 }
 
@@ -674,7 +682,7 @@ a {
     margin-top: 16px;
 }
 
-.column .link {
+.column .label {
     display: inline-block;
     margin-top: 12px;
     color: #bfbcb2;
@@ -682,6 +690,18 @@ a {
     font-weight: 400;
     line-height: 2.6rem; /* 185.714% */
     vertical-align: bottom;
+}
+
+.column .label.link:hover {
+    text-decoration: underline;
+}
+
+.column .icon {
+    color: white;
+}
+
+.column .icon:hover {
+    color: var(--primary_color);
 }
 
 .column span {
